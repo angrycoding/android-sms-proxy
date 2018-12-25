@@ -1,7 +1,6 @@
 package com.angrycoding.android_sms_proxy;
 
 import android.telephony.SmsManager;
-import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -19,16 +18,10 @@ public class MessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        Log.d("TEMP", "HERE");
         Map<String, String> payload = remoteMessage.getData();
-        Log.d("TEMP", payload.toString());
-        if (payload.size() == 0) return;
-        Log.d("TEMP", "From: " + remoteMessage.getFrom());
-        Log.d("TEMP", "Message data payload: " + payload);
-        String phone = payload.get("phone");
-        String text = payload.get("text");
-        if (phone != null && text != null && phone.length() != 0 && text.length() != 0) {
-            sendSMS(phone, text);
+        if (payload.containsKey("phone") && payload.containsKey("text")) {
+            String phone = payload.get("phone").trim(), text = payload.get("text").trim();
+            if (phone.length() != 0 && text.length() != 0) sendSMS(phone, text);
         }
     }
 
