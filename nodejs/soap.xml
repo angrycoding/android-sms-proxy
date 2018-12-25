@@ -3,15 +3,14 @@
         <operation>SEND</operation>
     </operations>
     <authentification>
-        <username>???</username>
-        <password>???</password>
+        <username>oriondvd2@ya.ru</username>
+        <password>12345678pP</password>
     </authentification>
     <message>
         <sender/>
         <text>Привет</text>
     </message>
     <numbers>
-        <number>PHONE_NUMBER1</number>
-        <number>PHONE_NUMBER2</number>
+        <number messageID="AAA">NUMBER</number>
     </numbers>
 </SMS>

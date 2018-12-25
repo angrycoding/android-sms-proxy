@@ -1,5 +1,6 @@
 {
 	"dependencies": {
+		"ip": "latest",
 		"fcm-push": "latest",
 		"express": "latest",
 		"body-parser": "latest",
