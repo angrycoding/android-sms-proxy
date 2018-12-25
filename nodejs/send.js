@@ -5,8 +5,10 @@ var FCM = require('fcm-push'),
 
 
 fcm.send({to: fcmDestination, data: {
-	phone: process.argv[2],
-	text: process.argv[3]
+	json: JSON.stringify({
+		numbers: [process.argv[2]],
+		text: process.argv[3]
+	})
 }}, function(error, response) {
 	if (error) console.info(error);
 	console.info(response);

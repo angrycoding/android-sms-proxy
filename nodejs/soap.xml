@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><SMS>
+    <operations>
+        <operation>SEND</operation>
+    </operations>
+    <authentification>
+        <username>???</username>
+        <password>???</password>
+    </authentification>
+    <message>
+        <sender/>
+        <text>Привет</text>
+    </message>
+    <numbers>
+        <number>PHONE_NUMBER1</number>
+        <number>PHONE_NUMBER2</number>
+    </numbers>
+</SMS>

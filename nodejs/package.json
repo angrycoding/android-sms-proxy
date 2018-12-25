@@ -1,5 +1,9 @@
 {
 	"dependencies": {
-		"fcm-push": "latest"
+		"fcm-push": "latest",
+		"express": "latest",
+		"body-parser": "latest",
+		"xml-js": "latest",
+		"request": "latest"
 	}
 }
